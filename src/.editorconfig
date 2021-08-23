@@ -1,0 +1,42 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+# All files
+[*]
+
+# Add a guideline at 120 char if this extension is installed:
+# https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+guidelines = 120
+
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+# C# style
+csharp_style_pattern_matching_over_is_with_cast_check = true:error
+
+# Indentation and spacing
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# New line preferences
+end_of_line = crlf
+
+#### .NET Coding Conventions ####
+
+# this. and Me. preferences
+dotnet_style_qualification_for_event = true:error
+dotnet_style_qualification_for_field = true:error
+dotnet_style_qualification_for_method = true:error
+dotnet_style_qualification_for_property = true:error
+
+# Prefer property expressions
+csharp_style_expression_bodied_properties = true:error
+
+# Public APIS are allowed to have parameters that are non used
+dotnet_code_quality.ca1801.api_surface = private, internal
+
+# IDE0073: The file header is missing or not located at the top of the file
+dotnet_diagnostic.IDE0073.severity = warning
